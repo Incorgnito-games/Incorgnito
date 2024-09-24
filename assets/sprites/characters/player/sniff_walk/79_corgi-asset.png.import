@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceo33w4u4ma8q"
-path="res://.godot/imported/corgi-icon.svg-500205379c2c5eb7e86757fcbfbf0b37.ctex"
+uid="uid://cc3jeyxjmmltu"
+path="res://.godot/imported/79_corgi-asset.png-3d56bb9cdf581ef915b9c302fded4c97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/corgi-icon.svg"
-dest_files=["res://.godot/imported/corgi-icon.svg-500205379c2c5eb7e86757fcbfbf0b37.ctex"]
+source_file="res://assets/sprites/characters/player/sniff_walk/79_corgi-asset.png"
+dest_files=["res://.godot/imported/79_corgi-asset.png-3d56bb9cdf581ef915b9c302fded4c97.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

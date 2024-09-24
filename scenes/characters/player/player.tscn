@@ -1,0 +1,182 @@
+[gd_scene load_steps=48 format=3 uid="uid://cm1oqschmgmcv"]
+
+[ext_resource type="Texture2D" uid="uid://ch7e30bnty0xr" path="res://assets/sprites/characters/player/idle_1/1_corgi-asset.png" id="1_lekba"]
+[ext_resource type="Texture2D" uid="uid://vyr3b0ucnihp" path="res://assets/sprites/characters/player/idle_1/2_corgi-asset.png" id="2_xowxu"]
+[ext_resource type="Texture2D" uid="uid://bxnnau7aetfqg" path="res://assets/sprites/characters/player/idle_1/3_corgi-asset.png" id="3_i04x1"]
+[ext_resource type="Texture2D" uid="uid://cyj0smmvbo6gw" path="res://assets/sprites/characters/player/idle_1/4_corgi-asset.png" id="4_3o3cx"]
+[ext_resource type="Texture2D" uid="uid://dq8dfwqbcj003" path="res://assets/sprites/characters/player/idle_1/5_corgi-asset.png" id="5_v44ac"]
+[ext_resource type="Texture2D" uid="uid://dlapfrkcbqn66" path="res://assets/sprites/characters/player/idle_2/23_corgi-asset.png" id="6_wlx17"]
+[ext_resource type="Texture2D" uid="uid://cqdyp1y67uk3g" path="res://assets/sprites/characters/player/idle_2/24_corgi-asset.png" id="7_gsc16"]
+[ext_resource type="Texture2D" uid="uid://c0nssr6kml6qd" path="res://assets/sprites/characters/player/idle_2/25_corgi-asset.png" id="8_02cbf"]
+[ext_resource type="Texture2D" uid="uid://dn5iq4kyfy1h8" path="res://assets/sprites/characters/player/idle_2/26_corgi-asset.png" id="9_5gohc"]
+[ext_resource type="Texture2D" uid="uid://bwfbueo51to6j" path="res://assets/sprites/characters/player/idle_2/33_corgi-asset.png" id="10_iitly"]
+[ext_resource type="Texture2D" uid="uid://dfjni3vsbh6v3" path="res://assets/sprites/characters/player/jump/00_corgi-asset.png" id="11_h7drl"]
+[ext_resource type="Texture2D" uid="uid://bqhec4ohnejia" path="res://assets/sprites/characters/player/jump/01_corgi-asset.png" id="12_w8s2o"]
+[ext_resource type="Texture2D" uid="uid://bjct56b7u36jm" path="res://assets/sprites/characters/player/jump/02_corgi-asset.png" id="13_8e64t"]
+[ext_resource type="Texture2D" uid="uid://b71mnvwwjdb3f" path="res://assets/sprites/characters/player/jump/03_corgi-asset.png" id="14_w4enl"]
+[ext_resource type="Texture2D" uid="uid://coe18mye2ap01" path="res://assets/sprites/characters/player/jump/04_corgi-asset.png" id="15_a2oam"]
+[ext_resource type="Texture2D" uid="uid://cijivo2ltwjv1" path="res://assets/sprites/characters/player/jump/05_corgi-asset.png" id="16_kf7j8"]
+[ext_resource type="Texture2D" uid="uid://1ru3wa2oaf1x" path="res://assets/sprites/characters/player/jump/06_corgi-asset.png" id="17_ihe7h"]
+[ext_resource type="Texture2D" uid="uid://862l1cr8rtn7" path="res://assets/sprites/characters/player/jump/07_corgi-asset.png" id="18_u1y6a"]
+[ext_resource type="Texture2D" uid="uid://d11mdk73i5enn" path="res://assets/sprites/characters/player/jump/08_corgi-asset.png" id="19_quktw"]
+[ext_resource type="Texture2D" uid="uid://8s4k6311eb14" path="res://assets/sprites/characters/player/jump/09_corgi-asset.png" id="20_xg2gh"]
+[ext_resource type="Texture2D" uid="uid://dilvlgk4l5o0w" path="res://assets/sprites/characters/player/jump/10_corgi-asset.png" id="21_l04hk"]
+[ext_resource type="Texture2D" uid="uid://dsbmyk4hvquyb" path="res://assets/sprites/characters/player/jump/11_corgi-asset.png" id="22_8mskg"]
+[ext_resource type="Texture2D" uid="uid://bh85xcgow1hjl" path="res://assets/sprites/characters/player/run/56_corgi-asset.png" id="23_142dg"]
+[ext_resource type="Texture2D" uid="uid://ckvbx0c25j5oy" path="res://assets/sprites/characters/player/run/57_corgi-asset.png" id="24_ympwh"]
+[ext_resource type="Texture2D" uid="uid://ftityqs2lmvu" path="res://assets/sprites/characters/player/run/58_corgi-asset.png" id="25_30mif"]
+[ext_resource type="Texture2D" uid="uid://dyxhjqjhepx6r" path="res://assets/sprites/characters/player/run/59_corgi-asset.png" id="26_tqq0b"]
+[ext_resource type="Texture2D" uid="uid://cfkkym4e6dixm" path="res://assets/sprites/characters/player/run/60_corgi-asset.png" id="27_wr2hv"]
+[ext_resource type="Texture2D" uid="uid://bwbjta247trc6" path="res://assets/sprites/characters/player/run/61_corgi-asset.png" id="28_c4g4g"]
+[ext_resource type="Texture2D" uid="uid://dfmd78xbhivo3" path="res://assets/sprites/characters/player/run/62_corgi-asset.png" id="29_t7iuo"]
+[ext_resource type="Texture2D" uid="uid://ci1ujtd0gp3iu" path="res://assets/sprites/characters/player/sit/34_corgi-asset.png" id="30_jjiqg"]
+[ext_resource type="Texture2D" uid="uid://ctvg58stb4vby" path="res://assets/sprites/characters/player/sit/35_corgi-asset.png" id="31_wliai"]
+[ext_resource type="Texture2D" uid="uid://haeb0q8qwb3u" path="res://assets/sprites/characters/player/sit/36_corgi-asset.png" id="32_grn73"]
+[ext_resource type="Texture2D" uid="uid://ccklhwm7sixn0" path="res://assets/sprites/characters/player/sit/37_corgi-asset.png" id="33_m8wdq"]
+[ext_resource type="Texture2D" uid="uid://cqs5tea7emucl" path="res://assets/sprites/characters/player/sit/38_corgi-asset.png" id="34_t2p2l"]
+[ext_resource type="Texture2D" uid="uid://dm7wnccg4vngo" path="res://assets/sprites/characters/player/sit/39_corgi-asset.png" id="35_u8hpe"]
+[ext_resource type="Texture2D" uid="uid://bdrf0hhyay2ac" path="res://assets/sprites/characters/player/sit/40_corgi-asset.png" id="36_bkkx8"]
+[ext_resource type="Texture2D" uid="uid://fcykgb86dkyn" path="res://assets/sprites/characters/player/sit/41_corgi-asset.png" id="37_77n0e"]
+[ext_resource type="Texture2D" uid="uid://506dj5efiiog" path="res://assets/sprites/characters/player/sit/44_corgi-asset.png" id="38_0j6qy"]
+[ext_resource type="Texture2D" uid="uid://cnrar3qoe558t" path="res://assets/sprites/characters/player/walk/55_corgi-asset.png" id="39_tyg4g"]
+
+[sub_resource type="Animation" id="Animation_ggfej"]
+resource_name = "idle_1"
+length = 1.00002
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_lekba"), ExtResource("2_xowxu"), ExtResource("3_i04x1"), ExtResource("4_3o3cx"), ExtResource("5_v44ac")]
+}
+
+[sub_resource type="Animation" id="Animation_qy2yb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_lekba")]
+}
+
+[sub_resource type="Animation" id="Animation_1dums"]
+resource_name = "idle_2"
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_wlx17"), ExtResource("7_gsc16"), ExtResource("8_02cbf"), ExtResource("9_5gohc"), ExtResource("10_iitly")]
+}
+
+[sub_resource type="Animation" id="Animation_rf1su"]
+resource_name = "jump"
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5, 0.583333, 0.666667, 0.75, 0.833333, 0.916667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_h7drl"), ExtResource("12_w8s2o"), ExtResource("13_8e64t"), ExtResource("14_w4enl"), ExtResource("15_a2oam"), ExtResource("16_kf7j8"), ExtResource("17_ihe7h"), ExtResource("18_u1y6a"), ExtResource("19_quktw"), ExtResource("20_xg2gh"), ExtResource("21_l04hk"), ExtResource("22_8mskg")]
+}
+
+[sub_resource type="Animation" id="Animation_xk1bu"]
+resource_name = "run"
+length = 0.750013
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("23_142dg"), ExtResource("24_ympwh"), ExtResource("25_30mif"), ExtResource("26_tqq0b"), ExtResource("27_wr2hv"), ExtResource("28_c4g4g"), ExtResource("29_t7iuo")]
+}
+
+[sub_resource type="Animation" id="Animation_t4s5j"]
+resource_name = "sit"
+length = 0.90001
+step = 0.111111
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("30_jjiqg"), ExtResource("31_wliai"), ExtResource("32_grn73"), ExtResource("33_m8wdq"), ExtResource("34_t2p2l"), ExtResource("35_u8hpe"), ExtResource("36_bkkx8"), ExtResource("37_77n0e"), ExtResource("38_0j6qy")]
+}
+
+[sub_resource type="Animation" id="Animation_4iuk4"]
+resource_name = "walk"
+length = 1.00003
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("39_tyg4g")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1cwr7"]
+_data = {
+"RESET": SubResource("Animation_qy2yb"),
+"idle_1": SubResource("Animation_ggfej"),
+"idle_2": SubResource("Animation_1dums"),
+"jump": SubResource("Animation_rf1su"),
+"run": SubResource("Animation_xk1bu"),
+"sit": SubResource("Animation_t4s5j"),
+"walk": SubResource("Animation_4iuk4")
+}
+
+[node name="player" type="CharacterBody3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0549967, 0.0726581, -0.0745236)
+texture_filter = 0
+texture = ExtResource("1_lekba")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1cwr7")
+}

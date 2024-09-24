@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://bpho114sm20i8"]
-
-[node name="Node3D" type="Node3D"]
-
-[node name="Test_Label" type="Label3D" parent="."]
-text = "This is the begginning"

@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceo33w4u4ma8q"
-path="res://.godot/imported/corgi-icon.svg-500205379c2c5eb7e86757fcbfbf0b37.ctex"
+uid="uid://ch7e30bnty0xr"
+path.s3tc="res://.godot/imported/1_corgi-asset.png-871825864e2738f401fca4d2dcfc2bc8.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://assets/corgi-icon.svg"
-dest_files=["res://.godot/imported/corgi-icon.svg-500205379c2c5eb7e86757fcbfbf0b37.ctex"]
+source_file="res://assets/sprites/characters/player/idle_1/1_corgi-asset.png"
+dest_files=["res://.godot/imported/1_corgi-asset.png-871825864e2738f401fca4d2dcfc2bc8.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -31,7 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
+detect_3d/compress_to=0
