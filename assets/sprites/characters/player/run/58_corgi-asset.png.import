@@ -3,26 +3,25 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ftityqs2lmvu"
-path.s3tc="res://.godot/imported/58_corgi-asset.png-aa1fed1f06f20f31af88d2ea1c8d057f.s3tc.ctex"
+path="res://.godot/imported/58_corgi-asset.png-aa1fed1f06f20f31af88d2ea1c8d057f.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/sprites/characters/player/run/58_corgi-asset.png"
-dest_files=["res://.godot/imported/58_corgi-asset.png-aa1fed1f06f20f31af88d2ea1c8d057f.s3tc.ctex"]
+dest_files=["res://.godot/imported/58_corgi-asset.png-aa1fed1f06f20f31af88d2ea1c8d057f.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

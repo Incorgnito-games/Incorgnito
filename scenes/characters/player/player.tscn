@@ -1,6 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://cm1oqschmgmcv"]
+[gd_scene load_steps=52 format=3 uid="uid://cm1oqschmgmcv"]
 
 [ext_resource type="Texture2D" uid="uid://ch7e30bnty0xr" path="res://assets/sprites/characters/player/idle_1/1_corgi-asset.png" id="1_lekba"]
+[ext_resource type="Script" path="res://scripts/characters/player/Player.cs" id="1_qn6yt"]
 [ext_resource type="Texture2D" uid="uid://vyr3b0ucnihp" path="res://assets/sprites/characters/player/idle_1/2_corgi-asset.png" id="2_xowxu"]
 [ext_resource type="Texture2D" uid="uid://bxnnau7aetfqg" path="res://assets/sprites/characters/player/idle_1/3_corgi-asset.png" id="3_i04x1"]
 [ext_resource type="Texture2D" uid="uid://cyj0smmvbo6gw" path="res://assets/sprites/characters/player/idle_1/4_corgi-asset.png" id="4_3o3cx"]
@@ -38,7 +39,10 @@
 [ext_resource type="Texture2D" uid="uid://bdrf0hhyay2ac" path="res://assets/sprites/characters/player/sit/40_corgi-asset.png" id="36_bkkx8"]
 [ext_resource type="Texture2D" uid="uid://fcykgb86dkyn" path="res://assets/sprites/characters/player/sit/41_corgi-asset.png" id="37_77n0e"]
 [ext_resource type="Texture2D" uid="uid://506dj5efiiog" path="res://assets/sprites/characters/player/sit/44_corgi-asset.png" id="38_0j6qy"]
-[ext_resource type="Texture2D" uid="uid://cnrar3qoe558t" path="res://assets/sprites/characters/player/walk/55_corgi-asset.png" id="39_tyg4g"]
+[ext_resource type="Texture2D" uid="uid://w87lsjdqxio3" path="res://assets/sprites/characters/player/walk/45_corgi-asset.png" id="40_026qx"]
+[ext_resource type="Texture2D" uid="uid://cfaeabgp8wseg" path="res://assets/sprites/characters/player/walk/46_corgi-asset.png" id="41_vg1k6"]
+[ext_resource type="Texture2D" uid="uid://cmw48lr1rgg8d" path="res://assets/sprites/characters/player/walk/47_corgi-asset.png" id="42_i1j2j"]
+[ext_resource type="Texture2D" uid="uid://demy5getwiiel" path="res://assets/sprites/characters/player/walk/48_corgi-asset.png" id="43_g4tqe"]
 
 [sub_resource type="Animation" id="Animation_ggfej"]
 resource_name = "idle_1"
@@ -144,6 +148,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_4iuk4"]
 resource_name = "walk"
 length = 1.00003
+loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -152,10 +157,10 @@ tracks/0/path = NodePath("Sprite3D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("39_tyg4g")]
+"values": [ExtResource("40_026qx"), ExtResource("41_vg1k6"), ExtResource("42_i1j2j"), ExtResource("43_g4tqe")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1cwr7"]
@@ -169,7 +174,10 @@ _data = {
 "walk": SubResource("Animation_4iuk4")
 }
 
-[node name="player" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("_animationPlayerNode", "_sprite3DNode")]
+script = ExtResource("1_qn6yt")
+_animationPlayerNode = NodePath("AnimationPlayer")
+_sprite3DNode = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0549967, 0.0726581, -0.0745236)
