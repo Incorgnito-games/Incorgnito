@@ -6,9 +6,9 @@ public partial class Player : CharacterBody3D
 {
     [ExportGroup("Required  Nodes")]
     [Export]
-    private AnimationPlayer _animationPlayerNode;
+    public AnimationPlayer AnimationPlayerNode;
     [Export]
-    private Sprite3D _sprite3DNode;
+    public Sprite3D Sprite3DNode;
     
     private Vector2 _direction;
 
@@ -33,15 +33,7 @@ public partial class Player : CharacterBody3D
             GameConstants.INPUT_MV_RIGHT,
             GameConstants.INPUT_MV_FWRD,
             GameConstants.INPUT_MV_BCKWRD);
-        if(_direction == Vector2.Zero)
-        {
-            _animationPlayerNode.Play(GameConstants.ANIM_IDLE_1);
-        }
-        else
-        {
-            _animationPlayerNode.Play(GameConstants.ANIM_WALK);
-        }
-
+   
     }
 
     private void Flip_Sprite()
@@ -55,6 +47,6 @@ public partial class Player : CharacterBody3D
         }
         
         bool isMovingLeft = Velocity.X < 0;
-        _sprite3DNode.FlipH = isMovingLeft;
+        Sprite3DNode.FlipH = isMovingLeft;
     }
 }
