@@ -1,20 +1,30 @@
+namespace Incorgnito.scripts.characters.player;
+
 using Godot;
-using System;
-using Incorgnito.scripts.General;
+using General;
 
-
-public partial class PlayerIdleState : Node
+public partial class PlayerIdleState : PlayerState
 {
-
-
-    public override void _Notification(int what)
+    
+    public override void _PhysicsProcess(double delta)
     {
-        base._Notification(what);
-
-        if (what == 5001)
+        if (CharacterNode.Direction != Vector2.Zero)
         {
-            Player characterNode = GetOwner<Player>();
-            characterNode.AnimationPlayerNode.Play(GameConstants.ANIM_IDLE_1);
+            CharacterNode.StateMachineNode.SwitchState<PlayerMoveState>();
         }
+     
+    }
+    public override void _Input(InputEvent @event)
+    {
+        if (Input.IsActionJustPressed(GameConstants.INPUT_MV_JUMP))
+        {
+            CharacterNode.StateMachineNode.SwitchState<PlayerJumpState>();
+        }
+    }
+
+    protected override void _PlayAnimation()
+    {
+        GD.Print("idling");
+        CharacterNode.AnimationPlayerNode.Play(GameConstants.ANIM_IDLE_1);
     }
 }

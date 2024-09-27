@@ -5,40 +5,31 @@ using Incorgnito.scripts.General;
 public partial class Player : CharacterBody3D
 {
     [ExportGroup("Required  Nodes")]
-    [Export]
-    public AnimationPlayer AnimationPlayerNode;
-    [Export]
-    public Sprite3D Sprite3DNode;
-    
-    private Vector2 _direction;
+    [Export]public AnimationPlayer AnimationPlayerNode;
+    [Export]public Sprite3D Sprite3DNode;
+    [Export]public StateMachine StateMachineNode;
 
-    public override void _Ready()
-    {
-    }
-    
+    public Vector2 Direction;
     
     public override void _PhysicsProcess(double delta)
     {
-        Velocity = new(_direction.X,0,_direction.Y);
-        
-
-        MoveAndSlide();
-        Flip_Sprite();
+  
     }
 
     public override void _Input(InputEvent @event)
     {
-        _direction = Input.GetVector(
+        Direction = Input.GetVector(
             GameConstants.INPUT_MV_LEFT,
             GameConstants.INPUT_MV_RIGHT,
             GameConstants.INPUT_MV_FWRD,
             GameConstants.INPUT_MV_BCKWRD);
-   
+        
+ 
     }
 
-    private void Flip_Sprite()
+    public void Flip_Sprite()
     {
-        bool isNotMovingHorizontally = Velocity.X == 0;
+        var isNotMovingHorizontally = (Velocity.X == 0);
 
         if (isNotMovingHorizontally)
         {
@@ -46,7 +37,7 @@ public partial class Player : CharacterBody3D
             
         }
         
-        bool isMovingLeft = Velocity.X < 0;
+        var isMovingLeft = (Velocity.X < 0);
         Sprite3DNode.FlipH = isMovingLeft;
     }
 }
