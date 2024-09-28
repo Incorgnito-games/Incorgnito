@@ -15,18 +15,21 @@ background_energy_multiplier = 1.08
 sky = SubResource("Sky_kwces")
 ambient_light_source = 3
 reflected_light_source = 2
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0331
-volumetric_fog_anisotropy = 0.15
-volumetric_fog_length = 63.2
-volumetric_fog_detail_spread = 4.39226
-volumetric_fog_sky_affect = 0.302
+ssr_fade_in = 0.172305
+ssr_fade_out = 4.5948
+volumetric_fog_density = 0.0303
+volumetric_fog_emission_energy = 3.25
+volumetric_fog_gi_inject = 1.05
+volumetric_fog_anisotropy = -0.8
+volumetric_fog_length = 44.75
+volumetric_fog_detail_spread = 6.0
+volumetric_fog_sky_affect = 0.112
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_kjrc7")
 
 [node name="player" parent="." instance=ExtResource("2_vkm2u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(-0.123463, 0, -0.992349, 0, 1, 0, 0.992349, 0, -0.123463, 0, -1, 0)
 
 [node name="Enviroment" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.40369, 0)
@@ -50,7 +53,8 @@ metadata/_editor_floor_ = Vector3(0, 2, 0)
 environment = SubResource("Environment_n6n0d")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment/WorldEnvironment"]
-transform = Transform3D(-0.407651, -0.537724, -0.73802, 0.286885, -0.842719, 0.455545, -0.866901, -0.0260234, 0.497801, 93.449, 11.7031, -24.1164)
+transform = Transform3D(-0.244164, -0.673125, -0.698059, 0.3839, -0.728131, 0.567844, -0.890508, -0.129338, 0.436196, 93.449, 11.7031, -24.1164)
+layers = 3
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
