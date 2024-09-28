@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b08kbhreojgu3"]
+
+[ext_resource type="PackedScene" uid="uid://cgind2tc4yejk" path="res://assets/Enviroment/Interior/proto/gltf/Primitive_Stairs.gltf" id="1_w2gn1"]
+
+[node name="Stairs" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34138, 0, 0.619175)
+
+[node name="Primitive_Stairs2" parent="StaticBody3D" instance=ExtResource("1_w2gn1")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4.04296, 0, 0, 0)
+polygon = PackedVector2Array(-1.51978, 4.00446, 2.44705, 0.0534136, -1.98701, 0.0154345, -2.006, 4.01273)

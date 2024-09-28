@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cm1oqschmgmcv"]
+[gd_scene load_steps=55 format=3 uid="uid://cm1oqschmgmcv"]
 
 [ext_resource type="Texture2D" uid="uid://ch7e30bnty0xr" path="res://assets/sprites/characters/player/idle_1/1_corgi-asset.png" id="1_lekba"]
 [ext_resource type="Script" path="res://scripts/characters/player/Player.cs" id="1_qn6yt"]
@@ -176,7 +176,13 @@ _data = {
 "walk": SubResource("Animation_4iuk4")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_suqiu"]
+size = Vector3(1.32642, 1, 1)
+
 [node name="player" type="CharacterBody3D" node_paths=PackedStringArray("AnimationPlayerNode", "Sprite3DNode", "StateMachineNode")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.190657, 0)
+collision_layer = 2
+floor_max_angle = 1.55334
 script = ExtResource("1_qn6yt")
 AnimationPlayerNode = NodePath("AnimationPlayer")
 Sprite3DNode = NodePath("Sprite3D")
@@ -206,7 +212,6 @@ script = ExtResource("44_8mla7")
 script = ExtResource("44_6hjya")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.073, -0.11)
 layers = 3
 gi_mode = 0
 pixel_size = 0.05
@@ -215,3 +220,7 @@ shaded = true
 alpha_cut = 2
 texture_filter = 0
 texture = ExtResource("1_lekba")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373413, 0, 0)
+shape = SubResource("BoxShape3D_suqiu")

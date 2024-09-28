@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://u5uxtbrwee1x"]
+
+[ext_resource type="PackedScene" uid="uid://by3x4c7a2dknu" path="res://assets/Enviroment/Interior/Furniture_proto/gltf/couch.gltf" id="1_csq6o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4cx6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_noohh"]
+size = Vector3(1.76489, 1.19324, 1.40833)
+
+[node name="Couch" type="Node3D"]
+
+[node name="couch2" parent="." instance=ExtResource("1_csq6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108406, 0, 0.304974)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="couch2"]
+physics_material_override = SubResource("PhysicsMaterial_g4cx6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="couch2"]
+transform = Transform3D(1.65505, 0, 0, 0, 0.748914, 0, 0, 0, 1.05184, -0.0059737, 0.511521, -0.00889978)
+shape = SubResource("BoxShape3D_noohh")

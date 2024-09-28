@@ -50,6 +50,11 @@ MoveJump={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Enviroment"
+3d_physics/layer_2="Player"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
