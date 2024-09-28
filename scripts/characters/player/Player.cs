@@ -1,3 +1,4 @@
+namespace Incorgnito.scripts.characters.player;
 using Godot;
 using System;
 using Incorgnito.scripts.General;
@@ -5,9 +6,9 @@ using Incorgnito.scripts.General;
 public partial class Player : CharacterBody3D
 {
     [ExportGroup("Required  Nodes")]
-    [Export]public AnimationPlayer AnimationPlayerNode;
-    [Export]public Sprite3D Sprite3DNode;
-    [Export]public StateMachine StateMachineNode;
+    [Export]public AnimationPlayer AnimationPlayerNode { private set; get; }
+    [Export]private Sprite3D Sprite3DNode {set; get; }
+    [Export]public StateMachine StateMachineNode { private set; get; }
 
     public Vector2 Direction;
     
@@ -23,8 +24,6 @@ public partial class Player : CharacterBody3D
             GameConstants.INPUT_MV_RIGHT,
             GameConstants.INPUT_MV_FWRD,
             GameConstants.INPUT_MV_BCKWRD);
-        
- 
     }
 
     public void Flip_Sprite()
@@ -34,7 +33,6 @@ public partial class Player : CharacterBody3D
         if (isNotMovingHorizontally)
         {
             return;
-            
         }
         
         var isMovingLeft = (Velocity.X < 0);

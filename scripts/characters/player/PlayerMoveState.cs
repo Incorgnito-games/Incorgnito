@@ -14,7 +14,8 @@ public partial class PlayerMoveState : PlayerState
            return;
        }
        
-       CharacterNode.Velocity = new Vector3(CharacterNode.Direction.X,0,CharacterNode.Direction.Y);
+       CharacterNode.Velocity = new Vector3(CharacterNode.Direction.X,0,CharacterNode.Direction.Y) ;
+       CharacterNode.Velocity *= 5;
        
        CharacterNode.MoveAndSlide(); 
        CharacterNode.Flip_Sprite();
