@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://ctmwgk54cagwm"]
+[gd_scene load_steps=57 format=3 uid="uid://ctmwgk54cagwm"]
 
 [ext_resource type="PackedScene" uid="uid://chmd124wcnscv" path="res://assets/Enviroment/Interior/Restaurant_proto/gltf/floor_kitchen_small.gltf" id="1_4yt6k"]
 [ext_resource type="PackedScene" uid="uid://ky0uehecergv" path="res://assets/Enviroment/Interior/proto/gltf/Primitive_Wall.gltf" id="2_1h735"]
@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://d0qfhfjg4q2qi" path="res://assets/Enviroment/Interior/Furniture_proto/gltf/table_small.gltf" id="53_f06r3"]
 [ext_resource type="PackedScene" uid="uid://c2pn1ns1hi1uc" path="res://assets/Enviroment/Interior/Restaurant_proto/gltf/crate_potatoes.gltf" id="54_r11ag"]
 [ext_resource type="PackedScene" uid="uid://cfgmciijfrqb2" path="res://assets/Enviroment/Interior/Restaurant_proto/gltf/crate_onions.gltf" id="55_tva0s"]
+[ext_resource type="PackedScene" uid="uid://bvopuyflc8nb" path="res://scenes/models/proto/exterior/nature/grass_plot.tscn" id="56_xoof8"]
 
 [node name="Tiles" type="Node3D"]
 
@@ -222,3 +223,6 @@ transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 
 
 [node name="crate_onions2" parent="." instance=ExtResource("55_tva0s")]
 transform = Transform3D(-0.5, 0, -0.866026, 0, 1, 0, 0.866026, 0, -0.5, 11.6178, -4.76837e-07, 10.2548)
+
+[node name="GrassPlot" parent="." instance=ExtResource("56_xoof8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22508, 0, -10.5387)
