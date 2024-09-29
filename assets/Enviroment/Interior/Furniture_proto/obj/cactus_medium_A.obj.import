@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvfqxi2mtg086"
+path="res://.godot/imported/cactus_medium_A.obj-c94f5489433bc85287c75779804d7e01.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cactus_medium_A.obj-c94f5489433bc85287c75779804d7e01.mesh"]
+
+source_file="res://assets/Enviroment/Interior/Furniture_proto/obj/cactus_medium_A.obj"
+dest_files=["res://.godot/imported/cactus_medium_A.obj-c94f5489433bc85287c75779804d7e01.mesh", "res://.godot/imported/cactus_medium_A.obj-c94f5489433bc85287c75779804d7e01.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

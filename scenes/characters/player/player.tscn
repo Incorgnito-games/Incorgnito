@@ -177,16 +177,17 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_suqiu"]
-size = Vector3(1.32642, 1, 1)
+size = Vector3(1.56647, 1.2666, 1)
 
-[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("AnimationPlayerNode", "Sprite3DNode", "StateMachineNode")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.190657, 0)
+[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("AnimationPlayerNode", "Sprite3DNode", "StateMachineNode", "CollisionShape3DNode")]
+transform = Transform3D(0.999607, 0, 0, 0, 0.999607, 0, 0, 0, 0.999607, 0, 0.190657, 0)
 collision_layer = 2
 floor_max_angle = 1.55334
 script = ExtResource("1_qn6yt")
 AnimationPlayerNode = NodePath("AnimationPlayer")
 Sprite3DNode = NodePath("Sprite3D")
 StateMachineNode = NodePath("StateMachine")
+CollisionShape3DNode = NodePath("CollisionShape3D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -212,6 +213,7 @@ script = ExtResource("44_8mla7")
 script = ExtResource("44_6hjya")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00618366, 0, 0)
 layers = 3
 gi_mode = 0
 pixel_size = 0.05
@@ -222,5 +224,5 @@ texture_filter = 0
 texture = ExtResource("1_lekba")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373413, 0, 0)
+transform = Transform3D(0.994119, 0, 0, 0, 0.994119, 0, 0, 0, 0.994119, 0.007959, -0.132517, 0)
 shape = SubResource("BoxShape3D_suqiu")

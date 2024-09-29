@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xsahob6pg3kw"
+path="res://.godot/imported/rug_rectangle_stripes_B.obj-2cd41d10102ba62138b79d9a14595387.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rug_rectangle_stripes_B.obj-2cd41d10102ba62138b79d9a14595387.mesh"]
+
+source_file="res://assets/Enviroment/Interior/Furniture_proto/obj/rug_rectangle_stripes_B.obj"
+dest_files=["res://.godot/imported/rug_rectangle_stripes_B.obj-2cd41d10102ba62138b79d9a14595387.mesh", "res://.godot/imported/rug_rectangle_stripes_B.obj-2cd41d10102ba62138b79d9a14595387.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

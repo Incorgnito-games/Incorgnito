@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlcvf81sb7j3m"
+path="res://.godot/imported/table_medium_long.obj-80fa046d623f06c0ae74b0a913882e5a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/table_medium_long.obj-80fa046d623f06c0ae74b0a913882e5a.mesh"]
+
+source_file="res://assets/Enviroment/Interior/Furniture_proto/obj/table_medium_long.obj"
+dest_files=["res://.godot/imported/table_medium_long.obj-80fa046d623f06c0ae74b0a913882e5a.mesh", "res://.godot/imported/table_medium_long.obj-80fa046d623f06c0ae74b0a913882e5a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

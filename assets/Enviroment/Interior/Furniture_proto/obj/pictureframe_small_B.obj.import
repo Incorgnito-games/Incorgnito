@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5bcml7mapvr4"
+path="res://.godot/imported/pictureframe_small_B.obj-91ae460118522c5bdb9d0b5210443fed.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pictureframe_small_B.obj-91ae460118522c5bdb9d0b5210443fed.mesh"]
+
+source_file="res://assets/Enviroment/Interior/Furniture_proto/obj/pictureframe_small_B.obj"
+dest_files=["res://.godot/imported/pictureframe_small_B.obj-91ae460118522c5bdb9d0b5210443fed.mesh", "res://.godot/imported/pictureframe_small_B.obj-91ae460118522c5bdb9d0b5210443fed.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

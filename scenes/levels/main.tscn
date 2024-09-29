@@ -65,7 +65,7 @@ shadow_enabled = true
 [node name="Furniture" type="Node3D" parent="SubViewportContainer/SubViewport/Enviroment"]
 
 [node name="Couch" parent="SubViewportContainer/SubViewport/Enviroment" instance=ExtResource("3_cjvxn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72947, 1.48153, -2.59441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72947, 1.48153, -1.59441)
 
 [node name="Floor" type="Node3D" parent="SubViewportContainer/SubViewport/Enviroment"]
 

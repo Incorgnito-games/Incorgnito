@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bfoxst6kegfgc"
+path="res://.godot/imported/cabinet_small.obj-92ad24ef6fc40da25d47fb04e510ee25.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabinet_small.obj-92ad24ef6fc40da25d47fb04e510ee25.mesh"]
+
+source_file="res://assets/Enviroment/Interior/Furniture_proto/obj/cabinet_small.obj"
+dest_files=["res://.godot/imported/cabinet_small.obj-92ad24ef6fc40da25d47fb04e510ee25.mesh", "res://.godot/imported/cabinet_small.obj-92ad24ef6fc40da25d47fb04e510ee25.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
