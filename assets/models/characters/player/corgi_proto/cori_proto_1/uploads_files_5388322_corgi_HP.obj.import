@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://byd6iby7girpr"
+path="res://.godot/imported/uploads_files_5388322_corgi_HP.obj-2cec9838390b40c26826c406b936d91e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uploads_files_5388322_corgi_HP.obj-2cec9838390b40c26826c406b936d91e.mesh"]
+
+source_file="res://assets/models/characters/player/corgi_proto/cori_proto_1/uploads_files_5388322_corgi_HP.obj"
+dest_files=["res://.godot/imported/uploads_files_5388322_corgi_HP.obj-2cec9838390b40c26826c406b936d91e.mesh", "res://.godot/imported/uploads_files_5388322_corgi_HP.obj-2cec9838390b40c26826c406b936d91e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

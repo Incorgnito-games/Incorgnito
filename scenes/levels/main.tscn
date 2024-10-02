@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjv5c4wvnhpv3"]
+[gd_scene load_steps=11 format=3 uid="uid://cjv5c4wvnhpv3"]
 
 [ext_resource type="Script" path="res://scripts/levels/Main.cs" id="1_kjrc7"]
-[ext_resource type="PackedScene" uid="uid://cm1oqschmgmcv" path="res://scenes/characters/player/player.tscn" id="2_vkm2u"]
+[ext_resource type="PackedScene" uid="uid://btbgahsjxiq4r" path="res://scenes/characters/player/player_3d.tscn" id="2_k2o00"]
 [ext_resource type="PackedScene" uid="uid://u5uxtbrwee1x" path="res://scenes/models/proto/interior/furniture/couch.tscn" id="3_cjvxn"]
 [ext_resource type="MeshLibrary" uid="uid://b4i8arp42flbm" path="res://resources/tiles_proto.tres" id="3_g0wl8"]
+[ext_resource type="Script" path="res://scripts/characters/player/Player3d.cs" id="3_ofo5m"]
 [ext_resource type="PackedScene" uid="uid://bvopuyflc8nb" path="res://scenes/models/proto/exterior/nature/grass_plot.tscn" id="4_kufhr"]
 [ext_resource type="PackedScene" uid="uid://b08kbhreojgu3" path="res://scenes/models/proto/stairs/stairs.tscn" id="5_vuf5s"]
 
@@ -42,6 +43,15 @@ stretch_shrink = 4
 handle_input_locally = false
 size = Vector2i(287, 162)
 render_target_update_mode = 4
+
+[node name="Player_3d" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("AnimationPlayerNode") instance=ExtResource("2_k2o00")]
+transform = Transform3D(0.992349, 0.0422268, -0.116017, -0.0418702, 0.999108, 0.00550966, 0.116146, -0.000609862, 0.993232, 0.195769, -1.90697, 4.70079)
+script = ExtResource("3_ofo5m")
+AnimationPlayerNode = NodePath("corgi_proto/AnimationPlayer")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/Player_3d"]
+transform = Transform3D(0.99921, -0.0347015, -0.0193908, 0.0390471, 0.948239, 0.315148, 0.00745095, -0.315656, 0.948844, -0.371633, 3.63471, 6.82298)
+fov = 35.0
 
 [node name="Enviroment" type="Node3D" parent="SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.40369, 0)
@@ -129,12 +139,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.3122, 5.4, -16.7642)
 [node name="GrassPlot16" parent="SubViewportContainer/SubViewport/Enviroment/Floor/grass" instance=ExtResource("4_kufhr")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -21.2436, 5.4, -20.7314)
 
-[node name="player" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_vkm2u")]
-transform = Transform3D(-0.992349, 0, 0.123463, 0, 1, 0, -0.123463, 0, -0.992349, 0, -1.10804, 1.05262)
-
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/player"]
-transform = Transform3D(-1, 2.99003e-08, -8.21505e-08, 0, 0.939693, 0.34202, 8.74228e-08, 0.34202, -0.939693, 0, 3.5, -10)
-fov = 35.0
-
 [node name="Stairs" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_vuf5s")]
 transform = Transform3D(-5.51865e-08, 0, -1.10461, 0, 1.00178, 0, 1.26252, 0, -4.82842e-08, -0.534809, -1.99897, -10.1538)
+
+[editable path="SubViewportContainer/SubViewport/Player_3d"]
+[editable path="SubViewportContainer/SubViewport/Player_3d/corgi_proto"]

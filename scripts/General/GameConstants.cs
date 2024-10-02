@@ -3,9 +3,9 @@ namespace Incorgnito.scripts.General;
 public class GameConstants
 {
     //Animation
-    public const string ANIM_IDLE_1 = "idle_1";
+    public const string ANIM_IDLE_1 = "idle";
     public const string ANIM_IDLE_2 = "idle_2";
-    public const string ANIM_WALK = "walk";
+    public const string ANIM_WALK = "Walk";
     public const string ANIM_JUMP = "jump";
     public const string ANIM_RUN = "run";
     

@@ -1,15 +1,25 @@
 [gd_scene load_steps=3 format=3 uid="uid://btbgahsjxiq4r"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gcb4l"]
+[ext_resource type="PackedScene" uid="uid://daabeyhpfswwo" path="res://assets/models/characters/player/corgi_proto/corgi_wels_proto/corgi_proto.glb" id="1_4yx7x"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_v8gxj"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gau8n"]
+radius = 0.4
+height = 1.61021
 
 [node name="Player_3d" type="CharacterBody3D"]
 
+[node name="corgi_proto" parent="." instance=ExtResource("1_4yx7x")]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_gcb4l")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.376922, 0.124345)
+shape = SubResource("CapsuleShape3D_gau8n")
 
-[node name="playerBody" type="Node3D" parent="."]
+[node name="StateMachine" type="Node3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="playerBody"]
-mesh = SubResource("CapsuleMesh_v8gxj")
+[node name="PlayerWalkState" type="Node3D" parent="StateMachine"]
+
+[node name="PlayerIdleState" type="Node3D" parent="StateMachine"]
+
+[node name="PlayerJumpState" type="Node3D" parent="StateMachine"]
+
+[editable path="corgi_proto"]
