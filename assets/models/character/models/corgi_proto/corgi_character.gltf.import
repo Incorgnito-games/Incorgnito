@@ -1,0 +1,44 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://vv5s0say145f"
+path="res://.godot/imported/corgi_character.gltf-82975456dc684256f8fdc8e42242476d.scn"
+
+[deps]
+
+source_file="res://assets/models/character/models/corgi_proto/corgi_character.gltf"
+dest_files=["res://.godot/imported/corgi_character.gltf-82975456dc684256f8fdc8e42242476d.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Armature/Skeleton3D/13467_Cardigan_Welsh_Corgi_v1_L3": {
+"physics/mask": 0,
+"physics/physics_material_override": null,
+"physics/shape_type": 2
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

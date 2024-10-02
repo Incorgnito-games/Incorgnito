@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ysg6kogk7jq"]
+
+[ext_resource type="PackedScene" uid="uid://vv5s0say145f" path="res://assets/models/character/models/corgi_proto/corgi_character.gltf" id="1_vp8gd"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="corgi_character" parent="." instance=ExtResource("1_vp8gd")]
+transform = Transform3D(0.0139098, 0, 0.999903, 0, 1, 0, -0.999903, 0, 0.0139098, 0.173788, 0, 0.328438)
