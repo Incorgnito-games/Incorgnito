@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 using Incorgnito.scripts.General;
@@ -5,53 +6,99 @@ using Incorgnito.scripts.General;
 namespace Incorgnito.scripts.characters.player;
 public partial class Player3d : CharacterBody3D
 {
-	public const float Speed = 2f;
-	public const float JumpVelocity = 4.5f;
-
-	[Export] private AnimationPlayer AnimationPlayerNode { set; get; }
-	public override void _PhysicsProcess(double delta)
+	public const double Gravity = -9.8;
+	public const double Speed = 50;
+	public const double JumpVelocity = 4.5;
+	public const double Acceleration = 3;
+	public const double DeAcceleration = 5;
+	public Transform3D camera;
+	public AnimationPlayer animationPlayerNode;
+	public CharacterBody3D characterBody3DNode;
+	
+	// [Export] private AnimationPlayer AnimationPlayerNode { set; get; }
+	public override void _Ready()
 	{
-		Vector3 velocity = Velocity;
+		animationPlayerNode = GetNode<AnimationPlayer>("corgi_proto/AnimationPlayer");
+		camera = GetNode<Camera3D>("%Camera3D").GetGlobalTransform();
+		characterBody3DNode = GetNode<CharacterBody3D>("%Player_3d");
+	}
 
+	public override void _PhysicsProcess(double delta)
+	{ 
+		var dir = new Vector3();
+		var velocity = new Vector3();
+		var isMoving = false;
 
-		if (!IsOnFloor())
+		if (Input.IsActionPressed(GameConstants.INPUT_MV_FWRD))
 		{
-			velocity += GetGravity() * (float)delta;
+			dir += -camera.Basis[2];
+			isMoving = true;
+		}
+		if (Input.IsActionPressed(GameConstants.INPUT_MV_BCKWRD))
+		{
+			dir += camera.Basis[2];
+			isMoving = true;
+		}
+		if (Input.IsActionPressed(GameConstants.INPUT_MV_LEFT))
+		{
+			dir += -camera.Basis[0];
+			isMoving = true;
+		}
+		if (Input.IsActionPressed(GameConstants.INPUT_MV_RIGHT))
+		{
+			dir += camera.Basis[0];
+			isMoving = true;
 		}
 
-		if (Input.IsActionJustPressed(GameConstants.INPUT_MV_JUMP) && IsOnFloor())
+		dir.Y = 0;
+		dir = dir.Normalized();
+
+		velocity.Y += (float)(delta * Gravity);
+
+		var horizontalVelocity = velocity;
+		horizontalVelocity.Y = 0;
+
+		var newPos = dir * (float)Speed;
+		var accel = DeAcceleration;
+		
+		if (dir.Dot(horizontalVelocity) > 0)
 		{
-			velocity.Y = JumpVelocity;
+			accel = Acceleration;
 		}
 
-		Vector2 inputDir = Input.GetVector(GameConstants.INPUT_MV_LEFT, GameConstants.INPUT_MV_RIGHT, GameConstants.INPUT_MV_FWRD, GameConstants.INPUT_MV_BCKWRD);
-		Vector3 direction = (Transform.Basis * new Vector3(inputDir.X, 0, inputDir.Y)).Normalized();
-		if (direction != Vector3.Zero)
+		horizontalVelocity = horizontalVelocity.Lerp(newPos, (float)(accel * delta));
+
+		velocity.X = horizontalVelocity.X;
+		velocity.Z = horizontalVelocity.Z;
+
+		if (isMoving)
 		{
-			velocity.X = direction.X * Speed;
-			velocity.Z = direction.Z * Speed;
+			var angle = Math.Atan2(horizontalVelocity.X, horizontalVelocity.Y);
+			var charRotation = characterBody3DNode.GetRotation();
+
+			charRotation.Y = (float)angle;
+			characterBody3DNode.SetRotation(charRotation);
 			
 		}
-		else
+		
+		if (velocity.Length() > 0.2)
 		{
-			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-			velocity.Z = Mathf.MoveToward(Velocity.Z, 0, Speed);
-		}
-
-		if (velocity.Length() > 0.1)
-		{
-			if (AnimationPlayerNode.CurrentAnimation != GameConstants.ANIM_WALK)
+			if (animationPlayerNode.CurrentAnimation != GameConstants.ANIM_WALK)
 			{
-				AnimationPlayerNode.Play(GameConstants.ANIM_WALK);
+				animationPlayerNode.Play(GameConstants.ANIM_WALK);
 				
 			}
 		}
 		else
 		{
-			AnimationPlayerNode.Play(GameConstants.ANIM_IDLE_1);
+			animationPlayerNode.Play(GameConstants.ANIM_IDLE_1);
 			
 		}
+		
+		GD.Print(velocity);
 		Velocity = velocity;
+		
 		MoveAndSlide();
+
 	}
 }
