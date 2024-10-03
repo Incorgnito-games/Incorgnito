@@ -73,11 +73,8 @@ public partial class Player3d : CharacterBody3D
 
 		if (isMoving)
 		{
-			var angle = Math.Atan2(horizontalVelocity.X, horizontalVelocity.Y);
-			var charRotation = characterBody3DNode.GetRotation();
-
-			charRotation.Y = (float)angle;
-			characterBody3DNode.SetRotation(charRotation);
+			var targetDirection = -dir;
+			characterBody3DNode.LookAt(GlobalPosition + targetDirection, Vector3.Up);
 			
 		}
 		
