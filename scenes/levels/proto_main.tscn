@@ -1,16 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://d3mkn6akxfjgp"]
+[gd_scene load_steps=10 format=3 uid="uid://c1oy7ua0vdbm6"]
 
 [ext_resource type="PackedScene" uid="uid://btbgahsjxiq4r" path="res://scenes/characters/player/player_3d.tscn" id="1_gfpvo"]
-[ext_resource type="Script" path="res://scripts/characters/player/Player3d.cs" id="2_7tcer"]
 [ext_resource type="MeshLibrary" uid="uid://b4i8arp42flbm" path="res://resources/tiles_proto.tres" id="3_u40no"]
 [ext_resource type="PackedScene" uid="uid://u5uxtbrwee1x" path="res://scenes/models/proto/interior/furniture/couch.tscn" id="4_k0oxy"]
 [ext_resource type="PackedScene" uid="uid://bvopuyflc8nb" path="res://scenes/models/proto/exterior/nature/grass_plot.tscn" id="5_nw3pi"]
 [ext_resource type="PackedScene" uid="uid://brk1fmm818ty0" path="res://scenes/levels/proto_building.tscn" id="6_to4lv"]
 [ext_resource type="PackedScene" uid="uid://b08kbhreojgu3" path="res://scenes/models/proto/stairs/stairs.tscn" id="7_y0ci4"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="8_qvifl"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="9_eegpw"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/camera_3d_resource.gd" id="10_sprxp"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="11_qxviu"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_kagqo"]
 
@@ -33,31 +28,7 @@ volumetric_fog_length = 44.75
 volumetric_fog_detail_spread = 6.0
 volumetric_fog_sky_affect = 0.112
 
-[sub_resource type="Resource" id="Resource_l03oq"]
-script = ExtResource("9_eegpw")
-duration = 1.0
-transition = 0
-ease = 2
-
-[sub_resource type="Resource" id="Resource_mvi4c"]
-script = ExtResource("10_sprxp")
-cull_mask = 1048575
-h_offset = 0.0
-v_offset = 0.0
-projection = 0
-fov = 75.0
-size = 1.0
-frustum_offset = Vector2(0, 0)
-near = 0.05
-far = 4000.0
-
 [node name="Proto" type="Node3D"]
-
-[node name="Player_3d" parent="." instance=ExtResource("1_gfpvo")]
-unique_name_in_owner = true
-transform = Transform3D(0.992349, 0.042227, -0.116017, -0.0418704, 0.999108, 0.00550969, 0.116147, -0.000609832, 0.993232, 0.195769, -1.90697, 4.70079)
-floor_snap_length = 0.2
-script = ExtResource("2_7tcer")
 
 [node name="Enviroment" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.40369, 0)
@@ -204,21 +175,14 @@ transform = Transform3D(8.6004, 0, -0.075657, 0, 1, 0, 0.63414, 0, 1.02608, -3.7
 [node name="Stairs" parent="." instance=ExtResource("7_y0ci4")]
 transform = Transform3D(-5.51865e-08, 0, -1.10461, 0, 1.00178, 0, 1.26252, 0, -4.82842e-08, -0.534809, -1.99897, -10.1538)
 
-[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(0.992349, 0.0422266, -0.116017, -0.0418704, 0.9991, 0.00550969, 0.116146, -0.000609855, 0.993232, -3.26403, 0.37829, 9.67147)
-script = ExtResource("8_qvifl")
-follow_target = NodePath("../Player_3d")
-look_at_mode = 1
-look_at_target = NodePath("../Player_3d")
-tween_resource = SubResource("Resource_l03oq")
-camera_3d_resource = SubResource("Resource_mvi4c")
+[node name="Player_3d" parent="." node_paths=PackedStringArray("playerCamera") instance=ExtResource("1_gfpvo")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.13181, -1.87478, 6.89916)
+playerCamera = NodePath("Camera3D")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="Player_3d"]
 unique_name_in_owner = true
-transform = Transform3D(0.992349, 0.0422266, -0.116017, -0.0418704, 0.9991, 0.00550969, 0.116146, -0.000609855, 0.993232, -3.26403, 0.37829, 9.67147)
-
-[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
-script = ExtResource("11_qxviu")
-
-[editable path="Player_3d"]
-[editable path="Player_3d/corgi_proto"]
+transform = Transform3D(0.36676, -0.186037, 0.28439, 0.000949342, 0.418983, 0.272859, -0.339833, -0.199607, 0.307685, 4.03562, 3.81545, 3.64287)
+projection = 1
+size = 11.187
+near = 10.0
+far = 144.83
